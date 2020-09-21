@@ -1,0 +1,27 @@
+.header {
+    display: block;
+    height: 64px;
+    background-color: purple;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+}
+
+// @media (max-width: 900px) {
+//     .header {
+//         grid-column-start: 1;
+//         grid-column-end: 3;
+    
+//     }
+// }
+
+// @media (min-width: 901px) 
+// {
+//     .sidebar { 
+//         width: 30vw;
+//         background-color: green;
+//         grid-column-start: 1;
+//         grid-row-start: 2;
+//     }
+    
+// }

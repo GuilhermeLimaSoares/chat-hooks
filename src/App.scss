@@ -1,0 +1,19 @@
+.container {
+  height: 100vh;
+}
+
+@media (max-width: 900px) 
+{
+    .container { }
+    
+}
+
+@media (min-width: 901px) 
+{
+    .container { 
+      display: grid;
+      grid-template-columns: 2fr 4fr;
+      grid-template-rows: 0.2fr 4fr
+    }
+    
+}
