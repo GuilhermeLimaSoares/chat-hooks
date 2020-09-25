@@ -2,6 +2,8 @@
 .textarea {
     width: 100%;
     height: 90px;
+    position: relative;
+    background-color: #dbcce4;
 
     &__form {
         display: grid;
@@ -22,15 +24,17 @@
 
     &__textarea {
         width: 95%;
-        height: 70px;
+        height: 45px;
     }
 
     &__input {
         display: flex;
         justify-content: center;
         width: 90%;
-        height: 70px;
+        height: 45px;
         grid-column-start: 2;
+        background-color: #9056bb;
+        color: #fefefe;
     }
 
 }
@@ -44,7 +48,6 @@
 @media (min-width: 901px) 
 {
     .textarea { 
-        background-color: yellow;
         grid-column-start: 2;
         grid-row-start: 3;
         grid-row-end: 4;

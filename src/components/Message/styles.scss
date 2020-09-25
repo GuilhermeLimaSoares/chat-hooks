@@ -1,6 +1,39 @@
 
 .message {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    color: #fefefe;
 
+    &__text-area {
+        // text-align: right;
+        // max-width: min-content;
+        // border-radius: 15px 0px 15px 15px;
+        // padding: 10px;
+        // background-color: #9056bb;
+
+        display: flex;
+    }
+
+    &__text {
+        // display: block;
+        // min-width: max-content;
+        display: flex;
+        min-width: min-content;
+        border-radius: 15px 0px 15px 15px;
+        padding: 10px;
+        background-color: #dbcce4;
+        
+    
+    }
+
+    .position-right {
+        justify-content: flex-end;
+        .message__text {
+            background-color: #9056bb;
+        }
+    }
+    
 }
 
 @media (max-width: 900px) 
@@ -12,7 +45,7 @@
 @media (min-width: 901px) 
 {
     .message { 
-        background-color: blue;
+    
         grid-column: 2;
         grid-row-start: 2;
         grid-row-end: 3;

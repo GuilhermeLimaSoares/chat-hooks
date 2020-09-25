@@ -1,6 +1,50 @@
 {
+  "chat": {
+    "id": "1",
+    "userName": "José"
+  },
   "conversations": [
-    { "id": 1, "user": "Maria", "message": [] }
+    {
+      "id": 1,
+      "idUser": "1",
+      "type": "client",
+      "userName": "Jose",
+      "message": "Ola, boa noite"
+    },
+    {
+      "id": 2,
+      "idUser": "1",
+      "type": "worker",
+      "userName": "Jose",
+      "message": "Oie, tudo bem e contigo?"
+    },
+    {
+      "id": 3,
+      "idUser": "1",
+      "type": "client",
+      "userName": "Jose",
+      "message": "Ola, boa noite cambada"
+    },
+    {
+      "id": 4,
+      "idUser": "1",
+      "type": "worker",
+      "userName": "Jose",
+      "message": "Oie, tudo bem e contigo manooo?"
+    },
+    {
+      "id": 5,
+      "idUser": "1",
+      "type": "worker",
+      "userName": "José",
+      "message": "batata"
+    },
+    {
+      "id": 6,
+      "idUser": "1",
+      "type": "worker",
+      "userName": "José",
+      "message": "carro"
+    }
   ]
-
 }
