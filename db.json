@@ -1,7 +1,7 @@
 {
   "chat": {
     "id": "1",
-    "userName": "José"
+    "userName": "jose"
   },
   "conversations": [
     {
@@ -16,14 +16,14 @@
       "idUser": "1",
       "type": "worker",
       "userName": "Jose",
-      "message": "Oie, tudo bem e contigo?"
+      "message": "Tenho uma duvida, poderia me ajudar?"
     },
     {
       "id": 3,
       "idUser": "1",
       "type": "client",
       "userName": "Jose",
-      "message": "Ola, boa noite cambada"
+      "message": "Claro, que sim"
     },
     {
       "id": 4,
@@ -45,6 +45,18 @@
       "type": "worker",
       "userName": "José",
       "message": "carro"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "fullName": "José",
+      "email": "jose@gmail.com"
+    },
+    {
+      "id": "2",
+      "fullName": "Maria",
+      "email": "maria@gmail.com"
     }
   ]
 }

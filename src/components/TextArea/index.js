@@ -4,8 +4,9 @@ import ChatService from './../../service/chat-service';
 import MessageService from './../../service/message-service';
 
 import './styles.scss';
+import './../../App.scss';
 
-export default function TextArea(){
+export default function TextArea(props){
     const [chat, setChat] = useState([]);
     const [messages, setMessages] = useState([]);
     const [text, setText] = useState('');
@@ -39,7 +40,8 @@ export default function TextArea(){
     }
 
     return (
-    <div className="textarea">
+
+    <div className={((props.deviceWidth) ? (`textarea ${props.disable.message ? '' : 'container--disable'}`) : 'textarea')}>
         <form className="textarea__form" onSubmit={(event) => {
             event.preventDefault();
             postMessage(chat, messages, text);
@@ -47,7 +49,6 @@ export default function TextArea(){
             }}>
             <label className="textarea__label">
             <textarea className="textarea__textarea" value={text} placeholder="Digite sua mensagem" onChange={(event) => {
-                console.log(event.target.value)
                 setText(event.target.value);
             }} />
             </label>

@@ -25,6 +25,8 @@
     &__textarea {
         width: 95%;
         height: 45px;
+        border-width: 0px 0px 0px;
+        border-left: 3px solid purple;
     }
 
     &__input {
@@ -41,7 +43,15 @@
 
 @media (max-width: 900px) 
 {
-    .textarea { }
+    .textarea { 
+        position: fixed;
+        bottom: 0px;
+
+        &__form {  
+            grid-template-columns: 85% 15%;
+
+        }
+    }
     
 }
 

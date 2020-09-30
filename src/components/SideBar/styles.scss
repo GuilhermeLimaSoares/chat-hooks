@@ -3,11 +3,35 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+
+    &__user-name {
+        display: flex;
+        text-transform: capitalize;
+    }
 }
 
 @media (max-width: 900px) 
 {
-    .sidebar { }
+    .sidebar {
+        padding: 5%;
+
+        &__user-name {   
+            align-items: center;
+            justify-content: center;
+            min-height: 40px;
+            border: 1px solid black;
+            border-radius: 25px;
+            border-left: 10px solid purple;
+            outline: unset;
+            margin: 2% 0%;
+
+            &:hover{
+                border-left: 10px solid black;
+                background-color: purple;
+                color: white;
+            }
+        }
+    }
     
 }
 
@@ -19,10 +43,10 @@
         grid-row-end: 4;
 
         &__user-name {
-            display: flex;
             align-items: flex-end;
             height: 80px;
             border: 1px solid #dbcce4;
+            font-family: serif;
             padding: 10px;
         }
     }

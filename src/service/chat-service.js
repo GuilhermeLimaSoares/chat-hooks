@@ -16,12 +16,15 @@ export default class ChatService extends Component {
         .then(function (response) {
       
             // handle success
-            // debugger;
             return response.data;
         })
         .catch(function (error) {
             // handle error
-            return error;
+            // return error;
+            return {
+              id: "1",
+              userName: "jose"
+            }
         })
         .then(function (data) {
             // always executed
@@ -30,18 +33,16 @@ export default class ChatService extends Component {
     }
 
      postChat(data){
-        console.log('posttt',data)
+
         axios.post('http://localhost:3004/chat',  {
           id: `${data.id}`,
           userName: `${data.userName}`
         })
           .then(function (response) {
-           
-            console.log('inserido chat', response);
 
           })
           .catch(function (error) {
-            console.log(error);
+
           });
     }
 }

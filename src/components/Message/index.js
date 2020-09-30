@@ -4,6 +4,7 @@ import ChatService from './../../service/chat-service';
 import MessageService from './../../service/message-service';
 
 import './styles.scss';
+import './../../App.scss';
 
 export default function Message(props) {
     const [chat, setChat] = useState([]);
@@ -42,27 +43,14 @@ export default function Message(props) {
       }
 
       function currentMessages(messages, currentChat){
-          return messages.filter(data => data.idUser === currentChat);
+           if (messages.length > 0){
+            return messages.filter(data => data.idUser === currentChat);
+          }
       }
 
     return (
-        <div className="message">
-{/* 
-            {(!!messages.conversations) && messages.conversations[chat.id - 1].message.map((message) => 
-               
-                <div key={message.id}>
-                    <p key={`${message.id}-userText`} className="message__text-area">
-                        <span className="message__text">{message.userText.text}</span>
-                    </p>
+        <div className={((props.deviceWidth) ? (`message ${props.disable.message ? '' : 'container--disable'}`) : 'message')}>
 
-                    <p key={`${message.id}-myText`} className={"message__text-area position-right"}>
-                        <span className="message__text">{message.myText.text}</span>
-                    </p>
-                </div>
-            )}   */}
-               
-
-               
             {(!!messages.conversations) && messages.conversations.map((message) => 
                
                     <p key={`message-${message.id}`} className={`message__text-area ${message.type === 'worker' ? 'position-right' : ''}`}>
