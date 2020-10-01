@@ -59,7 +59,7 @@ function App() {
 
   return (
     <div className="container">
-        <Header />
+        <Header isMobile={isMobile} isOpenMessage={openMessage}/>
         <SideBar disable={disableComponents} deviceWidth={isMobile} disableComponent={disableComponent} isOpenMessage={openMessage} />
         <Message disable={disableComponents} deviceWidth={isMobile} />
         <TextArea disable={disableComponents} deviceWidth={isMobile}/>

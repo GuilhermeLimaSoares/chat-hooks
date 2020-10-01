@@ -8,6 +8,14 @@
         display: flex;
         text-transform: capitalize;
     }
+
+    &__title {
+        display: flex;
+        justify-content: center;
+        font-size: 25px;
+        color: #5f095f;
+        margin: 10%;
+    }
 }
 
 @media (max-width: 900px) 
@@ -41,6 +49,7 @@
         grid-column-start: 1;
         grid-row-start: 2;
         grid-row-end: 4;
+        border: 1px solid #dbcce4;
 
         &__user-name {
             align-items: flex-end;

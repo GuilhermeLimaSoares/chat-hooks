@@ -45,6 +45,20 @@
       "type": "worker",
       "userName": "José",
       "message": "carro"
+    },
+    {
+      "id": 7,
+      "idUser": "1",
+      "type": "worker",
+      "userName": "jose",
+      "message": "abc"
+    },
+    {
+      "id": 8,
+      "idUser": "2",
+      "type": "worker",
+      "userName": "maria",
+      "message": "boa noite"
     }
   ],
   "users": [
