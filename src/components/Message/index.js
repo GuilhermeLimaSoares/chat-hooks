@@ -49,13 +49,23 @@ export default function Message(props) {
       }
 
     return (
-        <div className={((props.deviceWidth) ? (`message ${props.disable.message ? '' : 'container--disable'}`) : 'message')}>
+        <div className={((props.deviceWidth) 
+            ? (`message ${props.disable.message 
+            ? '' 
+            : 'container--disable'}`) 
+            : 'message')}>
 
             {(!!messages.conversations) && messages.conversations.map((message) => 
                
-                    <p key={`message-${message.id}`} className={`message__text-area ${message.type === 'worker' ? 'position-right' : ''}`}>
-                        <span className="message__text">{message.message}</span>
-                    </p>
+                <p key={`message-${message.id}`} 
+                    className={`message__text-area 
+                    ${message.type === 'worker' 
+                    ? 'position-right' : ''}`}>
+
+                    <span className="message__text">
+                      {message.message}
+                    </span>
+                </p>
             )}  
         </div>
         )

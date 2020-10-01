@@ -19,21 +19,26 @@ const mock = [
 export default function SideBar(props){
     let service = new ChatService();
     return(
-        <div className={((props.deviceWidth) ? (`sidebar ${props.disable.sideBar ? '' : 'container--disable'}`) : 'sidebar')}>
-            <span className="sidebar__title">Últimos Registros</span>
+        <div className={((props.deviceWidth) 
+            ? (`sidebar ${props.disable.sideBar 
+            ? '' 
+            : 'container--disable'}`) 
+            : 'sidebar')}>
+
+            <span className="sidebar__title">
+                Últimos Registros
+            </span>
             {
                 mock.map((data) => {
                     return <span className="sidebar__user-name" key={data.id} onClick={() => 
                         { 
                         service.postChat(data);
                         props.isOpenMessage();
-                        // console.log(props);
                     }
                     }>{data.userName}</span>
                 })
             }
-            
-            
+                 
         </div>
         )
 }

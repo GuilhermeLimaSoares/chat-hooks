@@ -41,18 +41,35 @@ export default function TextArea(props){
 
     return (
 
-    <div className={((props.deviceWidth) ? (`textarea ${props.disable.message ? '' : 'container--disable'}`) : 'textarea')}>
-        <form className="textarea__form" onSubmit={(event) => {
+    <div className={((props.deviceWidth) 
+        ? (`textarea ${props.disable.message 
+        ? '' 
+        : 'container--disable'}`) 
+        : 'textarea')}>
+
+        <form className="textarea__form" 
+            onSubmit={(event) => {
             event.preventDefault();
             postMessage(chat, messages, text);
             
             }}>
+
             <label className="textarea__label">
-            <textarea className="textarea__textarea" value={text} placeholder="Digite sua mensagem" onChange={(event) => {
-                setText(event.target.value);
-            }} />
+                <textarea 
+                    className="textarea__textarea" 
+                    value={text} 
+                    placeholder="Digite sua mensagem" 
+                    onChange={(event) => {
+                    setText(event.target.value);
+
+                }} />
             </label>
-            <input className="textarea__input" type="submit" value="Enviar" />
+
+            <input 
+                className="textarea__input" 
+                type="submit" 
+                value="Enviar" />
+
         </form>
     </div>)
 
