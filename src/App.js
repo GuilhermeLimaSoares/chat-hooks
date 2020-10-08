@@ -31,7 +31,6 @@ function App() {
 
     setIsMobile(!isDesktop);
 
-    console.log("tamanho da tela:", windowWidth, isDesktop, isMobile);
   }
 
   function disableComponent(isDisable){
@@ -42,8 +41,6 @@ function App() {
           textArea: isDisable
         }
       ) 
-      
-      console.log('habilitado:', disableComponents);
   }
 
   function openMessage(){

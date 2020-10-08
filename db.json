@@ -1,7 +1,7 @@
 {
   "chat": {
-    "id": "1",
-    "userName": "jose"
+    "id": "4",
+    "userName": "Paulo"
   },
   "conversations": [
     {
@@ -59,18 +59,60 @@
       "type": "worker",
       "userName": "maria",
       "message": "boa noite"
+    },
+    {
+      "id": 9,
+      "idUser": "4",
+      "type": "worker",
+      "userName": "Paulo",
+      "message": "ola"
     }
   ],
   "users": [
     {
-      "id": "1",
-      "fullName": "José",
+      "id": 1,
+      "userName": "José",
       "email": "jose@gmail.com"
     },
     {
-      "id": "2",
-      "fullName": "Maria",
+      "id": 2,
+      "userName": "Maria",
       "email": "maria@gmail.com"
+    },
+    {
+      "id": 3,
+      "userName": "Guilherme",
+      "email": "guilherme@gmail.com"
+    },
+    {
+      "id": 4,
+      "userName": "Paulo",
+      "email": "paulo@gmail.com"
+    },
+    {
+      "id": 5,
+      "userName": "juliana",
+      "email": "juliana@gmail.com"
+    },
+    {
+      "id": 6,
+      "userName": "Carlos",
+      "email": "carlos@gmail.com"
+    },
+    {
+      "id": 7,
+      "userName": "mariana",
+      "email": "mariana@gmail.com"
+    },
+    {
+      "id": 8,
+      "userName": "Sueli",
+      "email": "sueli@gmail.com"
+    },
+    {
+      "id": 9,
+      "userName": "Bahia",
+      "email": "bahia@gmail.com"
     }
   ]
 }

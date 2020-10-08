@@ -1,23 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 
 import ChatService from './../../service/chat-service';
+import UserService from './../../service/users-service';
 
 import './styles.scss';
 
-const mock = [
-    {id: 1, userName: 'jose'}, 
-    {id: 2, userName: 'maria'} , 
-    {id: 3, userName: 'Guilherme'}, 
-    {id: 4, userName: 'Paulo'}, 
-    {id: 5, userName: 'juliana'}, 
-    {id: 6, userName: 'Carlos'}, 
-    {id: 7, userName: 'mariana'}, 
-    {id: 8, userName: 'Sueli'}, 
-    {id: 9, userName: 'Bahia'}
-]
-
 export default function SideBar(props){
+    let [users, setUsers] = useState([]);
     let service = new ChatService();
+    let userService = new UserService();
+
+    const getMessages =  userService.getUsers();
+
+    useEffect(() => {
+        getUserService();
+    }, [users]);
+
+    function getUserService() {
+        getMessages.then((user) => {
+            setUsers(user);
+        })
+    }
+
     return(
         <div className={((props.deviceWidth) 
             ? (`sidebar ${props.disable.sideBar 
@@ -29,7 +33,7 @@ export default function SideBar(props){
                 Últimos Registros
             </span>
             {
-                mock.map((data) => {
+                users.map((data) => {
                     return <span className="sidebar__user-name" key={data.id} onClick={() => 
                         { 
                         service.postChat(data);

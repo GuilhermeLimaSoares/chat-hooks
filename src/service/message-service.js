@@ -82,7 +82,7 @@ export default class MessageService extends Component {
 
           })
           .catch(function (error) {
-            console.log(error);
+       
           });
           
     }
